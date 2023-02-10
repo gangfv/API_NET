@@ -1,4 +1,7 @@
 using API.Data;
+using API.Interfaces;
+using API.Models;
+using API.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
 
 builder.Services.AddDbContext<DataContext>(options =>
 {

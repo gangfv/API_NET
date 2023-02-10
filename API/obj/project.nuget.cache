@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "St9FuPFuCOyqWMdmAbJuR6NI1WJydyvxEZWr5sKmcl5Tanv4bWZHGc5Zz2vumGTg4HXcmITPrfprNTtyZWKbNQ==",
+  "dgSpecHash": "wiI+JXskOI0fLoJ9L6Sar3qvMe0bgGla3mh/gxSwa0ef3sLgus4Ypqkr7aKcjyQ5s4N0f9oiCIG/tSHsfuhcLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gang\\RiderProjects\\API\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\gang\\Desktop\\Rider\\API_NET\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gang\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\gang\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\gang\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\gang\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\gang\\.nuget\\packages\\efcore.namingconventions\\7.0.2\\efcore.namingconventions.7.0.2.nupkg.sha512",

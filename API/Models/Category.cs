@@ -2,9 +2,8 @@
 
 namespace API.Models;
 
-public class Category
+public class Category : BaseModel
 {
-    [Key] public int Id { get; set; }
-    public string Name { get; set; }
-    public ICollection<PokemonCategory> PokemonCategories { get; set; }
+    public string? Name { get; set; }
+    public ICollection<PokemonCategory>? PokemonCategories { get; set; }
 }

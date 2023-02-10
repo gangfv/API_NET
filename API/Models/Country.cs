@@ -2,9 +2,8 @@
 
 namespace API.Models;
 
-public class Country
+public class Country : BaseModel
 {
-    [Key] public int MyProperty { get; set; }
-    public string Name { get; set; }
-    public ICollection<Owner> Owners { get; set; }
+    public string? Name { get; set; }
+    public ICollection<Owner>? Owners { get; set; }
 }
