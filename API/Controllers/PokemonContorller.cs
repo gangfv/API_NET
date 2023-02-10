@@ -31,7 +31,7 @@ public class PokemonContorller : Controller
         return Ok(pokemons);
     }
 
-    [HttpGet("{pokeId}")]
+    [HttpGet("{pokeId:int}")]
     [ProducesResponseType(200, Type = typeof(Pokemon))]
     [ProducesResponseType(400)]
     public IActionResult GetPokemon(int pokeId)

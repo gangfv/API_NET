@@ -31,23 +31,23 @@ public class CountryController : Controller
         return Ok(country);
     }
 
-    [HttpGet("{countryId}")]
+    [HttpGet("{countryId:int}")]
     [ProducesResponseType(200, Type = typeof(Country))]
     [ProducesResponseType(400)]
-    public IActionResult GetCountry(int categoryId)
+    public IActionResult GetCountry(int countryId)
     {
-        if (!_countryRepository.CountryExists(categoryId))
+        if (!_countryRepository.CountryExists(countryId))
             return NotFound();
 
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        var country = _mapper.Map<CategoryDto>(_countryRepository.GetCountry(categoryId));
+        var country = _mapper.Map<CountryDto>(_countryRepository.GetCountry(countryId));
 
         return Ok(country);
     }
 
-    [HttpGet("owners/{ownerId}")]
+    [HttpGet("owners/{ownerId:int}")]
     [ProducesResponseType(200, Type = typeof(Country))]
     [ProducesResponseType(400)]
     public IActionResult GetCountryOfAnOwner(int ownerId)
