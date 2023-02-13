@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.ComponentModel.DataAnnotations;
-
-namespace API.Models;
+﻿namespace API.Models;
 
 public class Pokemon : BaseModel
 {
