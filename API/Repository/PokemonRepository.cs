@@ -66,12 +66,25 @@ public class PokemonRepository : IPokemonRepository
 
     public Pokemon GetPokemonTrimToUpper(PokemonDto pokemonCreate)
     {
-        return GetPokemons().FirstOrDefault(c => String.Equals(c!.Name!.Trim(), pokemonCreate.Name!.TrimEnd(), StringComparison.CurrentCultureIgnoreCase))!;
+        return GetPokemons().FirstOrDefault(c =>
+            String.Equals(c!.Name!.Trim(), pokemonCreate.Name!.TrimEnd(), StringComparison.CurrentCultureIgnoreCase))!;
     }
 
     public bool Save()
     {
         var saved = _context.SaveChanges();
         return saved > 0 ? true : false;
+    }
+
+    public bool UpdatePokemon(int ownerId, int categoryId, Pokemon pokemon)
+    {
+        _context.Update(pokemon);
+        return Save();
+    }
+
+    public bool DeletePokemon(Pokemon pokemon)
+    {
+        _context.Remove(pokemon);
+        return Save();
     }
 }
